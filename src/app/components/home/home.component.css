@@ -1,0 +1,12 @@
+.tnf-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;height:100px;padding:0 24px;background:linear-gradient(90deg,#2D3E50,#2d3e50);color:#f8fafc}
+.tnf-brand{font-weight:800;letter-spacing:.6px;font-size:18px;white-space:nowrap}
+.tnf-nav{display:flex;gap:18px;align-items:center}
+.tnf-link{color:#e2e8f0;font-weight:500;white-space:nowrap}
+.tnf-link:hover{color:#ffffff}
+.tnf-burger{display:none;color:#e2e8f0;font-size:24px;line-height:1}
+.tnf-mobile-menu{position:sticky;top:100px;margin:0 16px 16px auto;max-width:280px;border-radius:12px;display:flex;flex-direction:column;gap:10px;padding:12px;border:1px solid #e2e8f0}
+.tnf-mobile-menu a{color:#1A1A1A}
+.tnf-mobile-menu .tnf-close{color:#2D3E50;font-weight:600}
+.feature-card{transition:transform 160ms ease, box-shadow 160ms ease;will-change:transform}
+.feature-card:hover,.feature-card:focus-within{transform:translateY(-2px) scale(1.01);box-shadow:0 10px 26px rgba(2,6,23,.16);outline:none}
+@media (max-width: 880px){.tnf-nav{display:none}.tnf-burger{display:block}}
