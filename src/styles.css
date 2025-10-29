@@ -1,0 +1,4 @@
+:root{--primary-color:#2D3E50;--accent-color:#00C389;--text-color:#1A1A1A;--bg:#FFFFFF}
+*{box-sizing:border-box}
+body{margin:0;font-family:Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text-color)}
+a{text-decoration:none}
