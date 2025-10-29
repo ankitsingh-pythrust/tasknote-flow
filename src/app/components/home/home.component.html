@@ -1,0 +1,297 @@
+<!-- Page wrapper -->
+<div style="font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial; color:#1A1A1A; line-height:1.6;">
+  <!-- Header (100px, brand left, nav links only) -->
+  <header class="tnf-header">
+    <div class="tnf-brand" aria-label="TaskNote Flow brand">TASKNOTE FLOW</div>
+    <nav class="tnf-nav" aria-label="Primary">
+      <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" class="tnf-link">Features</a>
+      <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" class="tnf-link">Plans</a>
+      <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')" class="tnf-link">Testimonials</a>
+      <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq')" class="tnf-link">FAQ</a>
+      <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')" class="tnf-link">Contact</a>
+    </nav>
+    <a href="#menu" class="tnf-burger" (click)="toggleMenu($event)" aria-label="Toggle menu">&#9776;</a>
+  </header>
+  <!-- Mobile menu card (link-driven, not buttons) -->
+  <mat-card class="tnf-mobile-menu" *ngIf="menuOpen">
+    <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+    <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')">Plans</a>
+    <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')">Testimonials</a>
+    <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq')">FAQ</a>
+    <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')">Contact</a>
+    <a href="#close" class="tnf-close" (click)="toggleMenu($event)" aria-label="Close menu">Close ✕</a>
+  </mat-card>
+
+  <!-- Hero -->
+  <section id="hero" style="background:linear-gradient(180deg,#f1f5f9,#ffffff); padding:56px 16px;">
+    <mat-card style="max-width:1100px; margin:0 auto; padding:32px; border-radius:16px; box-shadow:0 10px 30px rgba(2,6,23,0.08);">
+      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+        <div style="flex:1 1 420px;">
+          <h1 style="margin:0 0 12px 0; font-size:40px; line-height:1.2; color:#2D3E50;">Tame tasks and notes in one place</h1>
+          <p style="margin:0 0 16px 0; font-size:16px; color:#334155;">Capture, organize, and plan without context switching—stay focused from idea to done.</p>
+          <ul style="margin:0 0 16px 18px; color:#334155;">
+            <li>Add tasks or notes instantly from desktop, web clipper, or mobile</li>
+            <li>Link notes to tasks so decisions turn into action</li>
+            <li>Plan your day with Today, Calendar, and Focus modes</li>
+          </ul>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button mat-raised-button color="primary" style="background:#2D3E50; color:#FFFFFF; padding:0 20px; height:44px; border-radius:8px; font-weight:600;">Get Started Free</button>
+            <button mat-stroked-button style="height:44px; border-radius:8px; border-color:#cbd5e1; color:#2D3E50;">Watch Demo</button>
+          </div>
+          <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">No credit card required. Import your notes and tasks in minutes.</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <!-- About -->
+  <section id="about" style="padding:40px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">About</h2>
+      <p style="margin:0 0 12px 0; color:#334155;">TaskNote Flow unites your to-dos and your thinking in one fast, tidy workspace. Instead of juggling separate apps, capture ideas, turn them into tasks, and track progress from a single, calm interface.</p>
+      <p style="margin:0 0 12px 0; color:#334155;">Built by productivity nerds who value speed and privacy, TaskNote Flow is keyboard-first, offline-capable, and syncs securely across devices so your work is always accessible.</p>
+      <ul style="margin:0; padding-left:18px; color:#334155;">
+        <li>Local-first with optional encrypted cloud sync</li>
+        <li>Keyboard-first commands for rapid capture and organization</li>
+        <li>Works across iOS, Android, Web, and Desktop</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section id="why" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">Why Choose TaskNote Flow</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card class="feature-card" style="flex:1 1 260px; min-width:260px; border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#2D3E50; margin-bottom:6px;">Less context switching</mat-card-title>
+          <mat-card-content style="color:#334155;">Notes and tasks live together, so you never bounce between tools to remember what to do next.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 260px; min-width:260px; border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#2D3E50; margin-bottom:6px;">From note to next step</mat-card-title>
+          <mat-card-content style="color:#334155;">Turn any highlight into an actionable task with one click and maintain backlinks to original context.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 260px; min-width:260px; border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#2D3E50; margin-bottom:6px;">Clarity for today and beyond</mat-card-title>
+          <mat-card-content style="color:#334155;">Today, Upcoming, and Calendar views help you plan realistically and see what truly matters.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 260px; min-width:260px; border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#2D3E50; margin-bottom:6px;">Find anything fast</mat-card-title>
+          <mat-card-content style="color:#334155;">Smart tags, filters, and full-text search surface exactly what you need—instantly.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 260px; min-width:260px; border-radius:12px; padding:18px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#2D3E50; margin-bottom:6px;">Private by design</mat-card-title>
+          <mat-card-content style="color:#334155;">Your data stays yours. We use encryption at rest and TLS in transit; export anytime in open formats.</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">Features</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">One workspace for tasks and notes • Lightning-fast capture • Linked notes-to-tasks • Powerful filters and calendar • Private by default</p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="display:flex; align-items:center; gap:8px; font-size:18px; color:#2D3E50;"><mat-icon>bolt</mat-icon> Zero‑Friction Capture</mat-card-title>
+          <mat-card-content style="color:#334155;">Hit Cmd/Ctrl+E to add a task or note from anywhere. Web clipper and mobile widgets included.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="display:flex; align-items:center; gap:8px; font-size:18px; color:#2D3E50;"><mat-icon>link</mat-icon> Linked Notes & Tasks</mat-card-title>
+          <mat-card-content style="color:#334155;">Keep decisions connected. Backlinks tie tasks to meeting notes, research, and references.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="display:flex; align-items:center; gap:8px; font-size:18px; color:#2D3E50;"><mat-icon>event</mat-icon> Calendar & Today View</mat-card-title>
+          <mat-card-content style="color:#334155;">Drag tasks onto your calendar, auto-rollover unfinished items, and focus with one click.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="display:flex; align-items:center; gap:8px; font-size:18px; color:#2D3E50;"><mat-icon>sync</mat-icon> Cross‑Device Sync</mat-card-title>
+          <mat-card-content style="color:#334155;">Work offline and sync when ready across desktop, web, and mobile—securely and reliably.</mat-card-content>
+        </mat-card>
+      </div>
+      <p style="margin:16px 0 0 0; color:#64748b; font-size:12px;">Local-first data model with conflict-free sync; encryption at rest and TLS in transit. Exports available as Markdown/CSV.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="howItWorks" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">How It Works</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 240px; min-width:240px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#2D3E50;">1. Capture anything</mat-card-title>
+          <mat-card-content style="color:#334155;">Type a quick task, dictate on mobile, or clip the web. Add tags, due dates, or links as you go.</mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 240px; min-width:240px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#2D3E50;">2. Organize effortlessly</mat-card-title>
+          <mat-card-content style="color:#334155;">Group by projects or tags, link notes to tasks, and let smart filters keep views tidy.</mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 240px; min-width:240px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#2D3E50;">3. Plan your day</mat-card-title>
+          <mat-card-content style="color:#334155;">Use Today and Calendar to schedule realistic blocks. Snooze or rescope with one shortcut.</mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 240px; min-width:240px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#2D3E50;">4. Review and improve</mat-card-title>
+          <mat-card-content style="color:#334155;">Weekly Review highlights wins, overdue items, and trends so you can adjust with confidence.</mat-card-content>
+        </mat-card>
+      </div>
+      <p style="margin:16px 0 0 0; color:#64748b; font-size:12px;">Tip: Press / to open the command palette anywhere.</p>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section id="plans" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">Plans</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">Transparent tiers for individuals and teams.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#2D3E50;">Free</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:24px; color:#2D3E50;">$0 forever</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>Unlimited notes and tasks</li>
+            <li>2 projects, 3 tags</li>
+            <li>Sync across 2 devices</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#2D3E50; height:42px;">Start Free</button>
+        </mat-card>
+        <mat-card style="flex:1 1 300px; min-width:280px; border:2px solid #2D3E50; border-radius:16px; padding:22px; background:#2D3E50; color:#f8fafc; transform:translateY(-4px); box-shadow:0 12px 30px rgba(2,6,23,0.15);">
+          <mat-card-title style="font-size:18px; color:#f8fafc;">Pro</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:24px; color:#f8fafc;">$6.99/month</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#e2e8f0;">
+            <li>Unlimited projects and tags</li>
+            <li>Calendar integration and web clipper</li>
+            <li>Offline mode with priority sync</li>
+          </ul>
+          <button mat-raised-button color="accent" style="width:100%; height:44px; background:#00C389; color:#0b1a0f; font-weight:700;">Upgrade to Pro</button>
+        </mat-card>
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#2D3E50;">Team</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:24px; color:#2D3E50;">$9/user/month</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>Shared workspaces and permissions</li>
+            <li>Comments and task assignments</li>
+            <li>Admin controls and priority support</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#2D3E50; height:42px;">Start Team Trial</button>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">Testimonials</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#2D3E50; font-weight:600;">Priya N. • <span style="font-weight:500; color:#475569;">Product Manager, Atlas Labs</span></p>
+          <p style="margin:0; color:#334155;">“Finally, a notes-and-tasks combo that doesn't slow me down. The Today view is my daily command center.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#2D3E50; font-weight:600;">Jordan M. • <span style="font-weight:500; color:#475569;">Freelance Designer</span></p>
+          <p style="margin:0; color:#334155;">“Turning meeting notes into tasks with backlinks is magic. I ship on time because the context is always there.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#2D3E50; font-weight:600;">Elena S. • <span style="font-weight:500; color:#475569;">Operations Lead, BrightCo</span></p>
+          <p style="margin:0; color:#334155;">“Our team moved from three tools to one. Setup took an afternoon and our weekly reviews are far clearer.”</p>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">FAQ</h2>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Is there a free plan?</span>
+          </mat-expansion-panel-header>
+          <p>Yes. The Free plan includes unlimited notes and tasks, plus sync across two devices.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Can I import from other apps?</span>
+          </mat-expansion-panel-header>
+          <p>You can import from Markdown, CSV, Evernote export, Apple Notes (via export), and Todoist CSV.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Does it work offline?</span>
+          </mat-expansion-panel-header>
+          <p>Yes. Capture and edit offline; changes sync securely once you're back online.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>How is my data secured?</span>
+          </mat-expansion-panel-header>
+          <p>We use encryption at rest and TLS in transit. You can also export your data anytime.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Do you have mobile apps?</span>
+          </mat-expansion-panel-header>
+          <p>Native apps are available for iOS and Android, plus web and desktop clients.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#2D3E50;">We're here to help</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 300px; min-width:260px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:16px; color:#2D3E50;">Email</mat-card-title>
+          <mat-card-content style="color:#334155;">support&#64;tasknoteflow.com</mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 300px; min-width:260px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:16px; color:#2D3E50;">Help Center</mat-card-title>
+          <mat-card-content style="color:#334155;">Guides and tips to get the most out of TaskNote Flow</mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 300px; min-width:260px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:16px; color:#2D3E50;">Community</mat-card-title>
+          <mat-card-content style="color:#334155;">Join discussions, share workflows, and request features</mat-card-content>
+        </mat-card>
+      </div>
+      <div style="margin-top:16px;">
+        <button mat-raised-button color="primary" style="background:#2D3E50; color:#FFFFFF;">Open Help Center</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#2D3E50; color:#e2e8f0;">
+    <div style="max-width:1100px; margin:0 auto; padding:28px 16px; display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; justify-content:space-between;">
+      <div style="min-width:220px;">
+        <div style="font-weight:700; margin-bottom:6px;">TASKNOTE FLOW</div>
+        <div style="font-size:13px; color:#cbd5e1;">TaskNote Flow helps you think clearly and execute consistently by uniting notes and tasks in one fast, privacy‑minded workspace.</div>
+      </div>
+      <div style="display:flex; gap:32px; flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Product</div>
+          <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Features</a>
+          <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Pricing/Plans</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1;">Docs</a>
+        </div>
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Company</div>
+          <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">About</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Careers</a>
+          <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')" style="display:block; text-decoration:none; color:#cbd5e1;">Contact</a>
+        </div>
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Legal</div>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Privacy</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1;">Terms</a>
+        </div>
+      </div>
+    </div>
+    <mat-divider style="border-top-color:#1f2937;"></mat-divider>
+    <div style="max-width:1100px; margin:0 auto; padding:14px 16px; font-size:12px; color:#94a3b8;">© 2025 tasknote-flow. All rights reserved.</div>
+  </footer>
+</div>
